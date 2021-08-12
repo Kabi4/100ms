@@ -48,7 +48,7 @@ a {
 
   --box-shadow-light: 2px 2px 8px rgba(255, 255, 255, 0.4);
 
-  --transition-common: all 0.2s linear !important;
+  --transition-common: all 0.15s linear !important;
 
   --border-common: 1px solid var(--primary);
 }

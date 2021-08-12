@@ -11,12 +11,16 @@ import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import Classes from './App.module.css';
 
 function App() {
-  const { type, message } = useNotification();
+  const { type, message, setNotificationHandler } = useNotification();
   const [notify, setNotify] = useState(false);
 
   useEffect(() => {
-    alert('There were no quote for Chracter in api and calling quotes for each character will be pointless!');
-  }, []);
+    setNotificationHandler({
+      type: notificationTypes.error,
+      message:
+        'The API do not have Quotes Field for the Characters! And Making Api call for each character is point less.',
+    });
+  }, [setNotificationHandler]);
 
   useEffect(() => {
     if (message && message.length > 0) {
@@ -30,7 +34,7 @@ function App() {
     if (notify) {
       timer = setTimeout(() => {
         setNotify(false);
-      }, 2000);
+      }, 1500);
     } else {
       timer = setTimeout(() => {}, 100);
     }
