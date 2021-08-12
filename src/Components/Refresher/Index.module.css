@@ -1,0 +1,33 @@
+.refresher {
+  height: 400px;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  border: var(--border-common);
+}
+
+.refresher_icon {
+  height: 6rem;
+  width: 6rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: var(--border-common);
+  transition: var(--transition-common);
+  outline: none;
+  background-color: black;
+}
+
+.refresher_icon:hover {
+  background-color: var(--primary);
+}
+
+.refresher_icon_ico {
+  transition: var(--transition-common);
+  color: var(--primary) !important;
+  font-size: 4rem !important;
+}
+
+.refresher_icon:hover .refresher_icon_ico {
+  color: black !important;
+}

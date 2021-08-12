@@ -1,0 +1,37 @@
+.header {
+  width: 100vw;
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4rem;
+  background-color: var(--background-secondary);
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: var(--box-shadow-light);
+  z-index: 999;
+}
+
+.logo {
+  height: 100%;
+  object-fit: contain;
+}
+
+.header_heading {
+  font-size: var(--font-extra-large);
+  font-weight: 700;
+  background-image: linear-gradient(to right, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 340px) {
+  .header {
+    padding: 0 5px;
+  }
+  .header_heading {
+    margin-right: 1rem;
+    font-size: var(--font-large);
+  }
+}

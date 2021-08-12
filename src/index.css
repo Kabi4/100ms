@@ -1,13 +1,77 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  color: #000 !important;
+  font-weight: 400 !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body,
+*::after,
+*,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif !important;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 4px;
+}
+*::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+*::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: darkgray;
+}
+a {
+  text-decoration: none;
+}
+
+/* Colors */
+:root {
+  --background: black;
+  --primary: #125d31;
+  --secondary: #44aa5e;
+  --text: #fff;
+  --alert: #e50914;
+
+  --background-secondary: #222222;
+
+  --font-large: 1.6rem;
+  --font-medium: 1.4rem;
+  --font-extra-large: 2.4rem;
+  --font-small: 1.2rem;
+
+  --box-shadow-light: 2px 2px 8px rgba(255, 255, 255, 0.4);
+
+  --transition-common: all 0.2s linear !important;
+
+  --border-common: 1px solid var(--primary);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+button {
+  cursor: pointer !important;
+}
+
+.place-center {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.show-enter-active {
+  transform: translateX(100%) !important;
+}
+.show-enter-done {
+  transform: translateX(-2rem) !important;
 }

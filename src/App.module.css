@@ -1,0 +1,46 @@
+.errorBox {
+  position: fixed;
+  right: 0;
+  transform: translateX(100%);
+  bottom: 2rem;
+  border: 1px solid var(--alert);
+  height: 7rem;
+  padding: 2rem;
+  font-size: var(--font-small);
+  color: var(--secondary);
+  transition: var(--transition-common);
+}
+.successBox {
+  position: fixed;
+  right: 0;
+  transform: translateX(100%);
+  bottom: 2rem;
+  border: var(--border-common);
+  font-size: var(--font-small);
+  height: 7rem;
+  padding: 2rem;
+  color: var(--secondary);
+  transition: var(--transition-common);
+}
+
+.error_icon {
+  color: var(--alert) !important;
+  margin-right: 1rem;
+}
+
+.success_icon {
+  color: var(--secondary) !important;
+  margin-right: 1rem;
+}
+
+.error_container {
+  display: flex;
+  align-items: center;
+}
+
+.error {
+  color: var(--alert);
+}
+.success {
+  color: var(--secondary);
+}
