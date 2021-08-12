@@ -4,15 +4,16 @@ import Classes from './Index.module.css';
 //Alert There was no array of quotes
 
 const Index = ({
-  id,
+  id = 'hii',
   name = 'Joshan Gurera',
-  image,
+  image = 'ImageUrl.jpg',
   occupation = ['Teacher', 'Student'],
   status = 'Dead',
   nickname = 'Harry',
   actor = 'Paul Wesley',
   seasons = [1, 2, 3, 4, 5],
   quotes = ['My Quotes'],
+  birthday = '07/09/1967',
 }) => {
   return (
     <div className={Classes.item}>
@@ -32,6 +33,9 @@ const Index = ({
         </div>
         <div className={Classes.content_item}>
           <p>Appearances(Seasons): {seasons.reduce((prev, curr, i) => (i !== 0 ? prev + ', ' + curr : curr), '')}</p>
+          <p>
+            Date Of Birth: <span className={`${Classes.alert}`}>{birthday}</span>
+          </p>
         </div>
         {/* <div className={Classes.content_list}>
           <p>Quotes By the Character:</p>

@@ -54,6 +54,7 @@ const List = () => {
             nickname: ele.nickname,
             occupation: [...ele.occupation],
             seasons: [...ele.appearance],
+            birthday: ele.birthday,
           };
         }),
       ]);
